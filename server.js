@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
+const cors = require('cors')
 
 
 
@@ -17,7 +18,7 @@ const app = express()
 // Body parser middleware
 
 app.use(express.json())
-
+app.use(cors())
 
 
 //DB config
